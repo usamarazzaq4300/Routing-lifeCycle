@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import Header from "../components/header"
-import Company from "../components/company"
+import Company from "../pages/company"
 import Home from "../components/home"
-import About from "../components/about"
+import About from "../pages/about"
 import Footer from "../components/footer"
+import NavBar from "../components/navbar"
+import Contact from "../pages/contact"
 function Routing() {
     return (
         <div>
             <Router>
                 <Header />
-
+                <NavBar />
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -26,6 +28,11 @@ function Routing() {
                 <Switch>
                     <Route path="/about">
                         <About />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/contact">
+                        <Contact />
                     </Route>
                 </Switch>
 
